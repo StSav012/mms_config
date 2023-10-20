@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+    <Item>
+        <SERVER>
+            <Name>Gmail</Name>
+            <Http>smtp.gmail.com</Http>
+            <Port>465</Port>
+            <Mail>SSL</Mail>
+        </SERVER>
+
+        <SERVER>
+            <Name>Hotmail</Name>
+            <Http>smtp.live.com</Http>
+            <Port>25</Port>
+            <Mail>STARTTLS</Mail>
+        </SERVER>
+
+        <SERVER>
+            <Name>Tom</Name>
+            <Http>smtp.tom.com</Http>
+            <Port>25</Port>
+            <Mail>NONE</Mail>
+        </SERVER>
+
+        <SERVER>
+            <Name>Aol</Name>
+            <Http>smtp.aol.com</Http>
+            <Port>25</Port>
+            <Mail>NONE</Mail>
+        </SERVER>
+
+
+    </Item>
+</Config>
