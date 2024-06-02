@@ -1,11 +1,5 @@
 # coding=utf-8
-import sys
 
-from qtpy.QtWidgets import QApplication
+from . import main
 
-from .FormMain import FormMain
-
-app: QApplication = QApplication(sys.argv)
-w: FormMain = FormMain()
-w.show()
-sys.exit(app.exec())
+exit(main())
