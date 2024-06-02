@@ -1,5 +1,5 @@
 # coding=utf-8
-from typing import Self
+from typing import Any
 
 from .MmscOperatorData import MmscOperatorData
 
@@ -29,10 +29,14 @@ class MmscCountryData:
     def Count(self) -> int:
         return len(self._Operator)
 
-    def __lt__(self, other: Self) -> bool:
+    def __lt__(self, other: Any) -> bool:
+        if not isinstance(other, MmscCountryData):
+            return NotImplemented
         return self._CountryName < other.CountryName
 
-    def __eq__(self, other: Self) -> bool:
+    def __eq__(self, other: Any) -> bool:
+        if not isinstance(other, MmscCountryData):
+            return NotImplemented
         return self._CountryName == other.CountryName
 
     def Add(self, data: MmscOperatorData) -> None:

@@ -1,5 +1,5 @@
 # coding=utf-8
-from typing import Self
+from typing import Any
 
 from .SmtpOperatorData import SmtpOperatorData
 
@@ -29,10 +29,14 @@ class SmtpCountryData:
     def count(self) -> int:
         return len(self._data)
 
-    def __lt__(self, other: Self) -> bool:
+    def __lt__(self, other: Any) -> bool:
+        if not isinstance(other, SmtpCountryData):
+            return NotImplemented
         return self._country_name < other.CountryName
 
-    def __eq__(self, other: Self) -> bool:
+    def __eq__(self, other: Any) -> bool:
+        if not isinstance(other, SmtpCountryData):
+            return NotImplemented
         return self._country_name == other.CountryName
 
     def append(self, data: SmtpOperatorData) -> None:
